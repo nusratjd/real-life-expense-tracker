@@ -64,6 +64,10 @@ from.addEventListener('submit', (e) => {
             if (filter.q && !t.toLowerCase() .includes(filter.q)) return false;
             return true;
         });
-   
+
+        list.innerHTML = shown.map(rowHTML).join('');
+        empty.classList.toggle('hidden', shown.length > 0);
+        drawChart();
     }
+    
 })
