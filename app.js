@@ -60,7 +60,10 @@ from.addEventListener('submit', (e) => {
 
         const shown = txs.filter((t) => {
             if (filter.type !== 'all' && t.type !== filter.type) return false;
-        })
+             if (filter.cat !== 'all' && t.category !== filter.cat) return false;
+            if (filter.q && !t.toLowerCase() .includes(filter.q)) return false;
+            return true;
+        });
    
     }
 })
