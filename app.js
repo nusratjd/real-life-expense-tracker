@@ -3,3 +3,7 @@ const THEME_KEY = 'smartspend.theme';
 
 let txs = load();
 let filter = {type: 'all', cat: 'all', q: ''};
+
+const $ = (s) => document.querySelector(s);
+const from            = $ ('texFrom');
+const list            = $ ('texList');
