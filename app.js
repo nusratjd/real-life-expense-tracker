@@ -40,6 +40,8 @@ from.addEventListener('submit', (e) => {
     list.addEventListener('click', (e) => {
         const btn = e.target.closest('button[data-del]');
         if (!btn) return;
-        
-    })
+        txs = txs.filter((t) => t.id !== btn.dataset.del);
+        save();
+        render ();
+    });
 })
