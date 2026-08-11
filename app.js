@@ -83,4 +83,11 @@ from.addEventListener('submit', (e) => {
         <span class="amt">${sign}৳${t.amount.toLocaleString()}</spam>
         <button data-del="${t.id}" aria-lable="Delete">Delete</button>
         </li>`;
+    }
+    function drawChart() {
+        const byCat = {};
+        txs.filter(t => t.type === 'expense').forEach(t => {
+            byCat[t.category] = (byCat[t.category] || 0) + t.amount;
+        });
+    }
 })
