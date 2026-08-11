@@ -31,4 +31,11 @@ from.addEventListener('submit', (e) => {
         category: fd.get('category'),
         date: fd.get('date'),
     };
+    if (!tx.title || !tx.amount || tx.amount <= 0) return;
+    txs.unshift (tx);
+    save ();
+    form.reset ();
+    from.date.value = new Date().toDateString().slice(0,10);
+    return ();
+    
 })
