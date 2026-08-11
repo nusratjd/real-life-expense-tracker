@@ -16,3 +16,7 @@ const filterType      = $ ('#filterType');
 const filterCat       = $ ('#filterCat');
 const searchInp       = $ ('#searchInp');
 const themeBtn        = $ ('#themeBtn');
+
+initTheme();
+from.date.value = new Date().toISOString().slice(0, 10);
+return () ;
