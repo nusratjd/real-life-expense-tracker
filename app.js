@@ -78,5 +78,7 @@ from.addEventListener('submit', (e) => {
         <div class="icon">${initail}</div>
         <div class="meta">
         <span class="title">${escpeHtml(t.title)}</span>
+        <span class="sub">${t.category} .$ {formatDate(t.date)}</span>
+        </div>
     
 })
