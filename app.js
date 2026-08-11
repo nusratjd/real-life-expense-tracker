@@ -100,7 +100,10 @@ from.addEventListener('submit', (e) => {
             return `
             <div class="bar">
             <div class="top"><span>${cat}</span><span>৳${amt.toLocaleString()} . ${pct}%</span></div>
-            `
-        })
+            <div class="track"><div class="fill" style="width:${pct}%"></div></div>
+            </div>`;
+        }).join('');
     }
+
+    
 })
