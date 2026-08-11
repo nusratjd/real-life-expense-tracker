@@ -74,7 +74,9 @@ from.addEventListener('submit', (e) => {
         const sign = t.type === 'income' ? '+' : '-';
         const initail = (t.title[0] || '?').toUpperCase();
         return `
+        <li class="tx ${t.type}">
+        <div class="icon">${initail}</div>
+
         
-        `
-    }
+    
 })
