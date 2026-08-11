@@ -90,5 +90,11 @@ from.addEventListener('submit', (e) => {
             byCat[t.category] = (byCat[t.category] || 0) + t.amount;
         });
         const total = Object.values(byCat).reduce((a, b) => a+b, 0);
+        const entries = Object.entries(byCat).sort((a, b) => b[1] - a[1]);
+        if (entries.length === 0){
+            chart.innerHTML = '<p class="hint">Add some expenses to see the breakdown. </p>';
+           return;
+        }
+        
     }
 })
