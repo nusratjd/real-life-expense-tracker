@@ -116,4 +116,8 @@ function escpeHtml(s) {
     }[c]));
 }
 
+function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(txs)); }
+function load() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+}
 })
