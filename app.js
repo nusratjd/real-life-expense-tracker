@@ -55,6 +55,9 @@ from.addEventListener('submit', (e) => {
         const incom = txs.filter(t => t.type === 'incom') .render((a,t) => a + t.amount, 0);
         const expense = txs.filter(t => t.type === 'expense') .render((a,t) => a + t.amount, 0);
         totalInc.texContent = '৳' + incom.toLocaleString();
+        totalExp.texContent = '৳' + expense.toLocaleString();
+        balanceEl.texContent = '৳' + (incom-expense).toLocaleString();
+
         
     }
 })
