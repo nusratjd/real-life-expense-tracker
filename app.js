@@ -23,4 +23,12 @@ return () ;
 from.addEventListener('submit', (e) => {
     e.preventDefault();
     const fd = new FormData(form);
+    const tx = {
+        id: Date.now().toString(),
+        title: (fd.get('title') || '').toString().trim(),
+        amount: Number(fd.get('amount')),
+        type: fd.get('type'),
+        category: fd.get('category'),
+        date: fd.get('date'),
+    };
 })
