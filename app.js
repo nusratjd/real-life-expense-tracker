@@ -69,5 +69,12 @@ from.addEventListener('submit', (e) => {
         empty.classList.toggle('hidden', shown.length > 0);
         drawChart();
     }
-    
+
+    function rowHTML(t) {
+        const sign = t.type === 'income' ? '+' : '-';
+        const initail = (t.title[0] || '?').toUpperCase();
+        return `
+        
+        `
+    }
 })
