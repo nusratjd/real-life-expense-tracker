@@ -99,7 +99,7 @@ from.addEventListener('submit', (e) => {
             const pct = total ? Math.round((amt / total) *100) : 0;
             return `
             <div class="bar">
-            <div 
+            <div class="top"><span>${cat}</span><span>৳${amt.toLocaleString()} . ${pct}%</span></div>
             `
         })
     }
