@@ -80,5 +80,5 @@ from.addEventListener('submit', (e) => {
         <span class="title">${escpeHtml(t.title)}</span>
         <span class="sub">${t.category} .$ {formatDate(t.date)}</span>
         </div>
-    
+        <span class="amt">${sign}৳${t.amount.toLocaleString()}</spam>
 })
