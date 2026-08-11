@@ -123,6 +123,10 @@ function load() {
 }
 
 function initTheme() {
-    
+    const saved = localStorage.getItem(THEME_KEY) || 'light';
+    setTheme(saved);
+}
+function setTheme(mode) {
+    document.documentElement.dataset.theme = mode;
 }
 })
