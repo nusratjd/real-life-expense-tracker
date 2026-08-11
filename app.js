@@ -81,4 +81,6 @@ from.addEventListener('submit', (e) => {
         <span class="sub">${t.category} .$ {formatDate(t.date)}</span>
         </div>
         <span class="amt">${sign}৳${t.amount.toLocaleString()}</spam>
+        <button data-del="${t.id}" aria-lable="Delete">Delete</button>
+        </li>`;
 })
