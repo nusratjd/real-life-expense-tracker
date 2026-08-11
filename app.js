@@ -95,6 +95,12 @@ from.addEventListener('submit', (e) => {
             chart.innerHTML = '<p class="hint">Add some expenses to see the breakdown. </p>';
            return;
         }
-        
+        chart.innerHTML = entries.map(([cat, amt]) => {
+            const pct = total ? Math.round((amt / total) *100) : 0;
+            return `
+            <div class="bar">
+            <div 
+            `
+        })
     }
 })
