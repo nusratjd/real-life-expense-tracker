@@ -58,6 +58,9 @@ from.addEventListener('submit', (e) => {
         totalExp.texContent = '৳' + expense.toLocaleString();
         balanceEl.texContent = '৳' + (incom-expense).toLocaleString();
 
-        
+        const shown = txs.filter((t) => {
+            if (filter.type !== 'all' && t.type !== filter.type) return false;
+        })
+   
     }
 })
