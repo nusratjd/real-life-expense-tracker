@@ -37,5 +37,9 @@ from.addEventListener('submit', (e) => {
     form.reset ();
     from.date.value = new Date().toDateString().slice(0,10);
     return ();
-    
+    list.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-del]');
+        if (!btn) return;
+        
+    })
 })
