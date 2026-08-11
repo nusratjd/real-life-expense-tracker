@@ -44,4 +44,8 @@ from.addEventListener('submit', (e) => {
         save();
         render ();
     });
+    filterType.addEventListener('change', () => { filter.type = filterType.value;render(); });
+    filterType.addEventListener('change', () => { filter.cat = filterCht.value;render(); });
+    searchInp.addEventListener('input', () => { filter.q = searchInp.valu.toLowerCase(); render(); });
+    
 })
