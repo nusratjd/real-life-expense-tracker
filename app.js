@@ -89,5 +89,6 @@ from.addEventListener('submit', (e) => {
         txs.filter(t => t.type === 'expense').forEach(t => {
             byCat[t.category] = (byCat[t.category] || 0) + t.amount;
         });
+        const total = Object.values(byCat).reduce((a, b) => a+b, 0);
     }
 })
