@@ -47,5 +47,8 @@ from.addEventListener('submit', (e) => {
     filterType.addEventListener('change', () => { filter.type = filterType.value;render(); });
     filterType.addEventListener('change', () => { filter.cat = filterCht.value;render(); });
     searchInp.addEventListener('input', () => { filter.q = searchInp.valu.toLowerCase(); render(); });
-    
+    themeBtn.addEventListener('click',() => {
+        const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        setTheme (cur);
+    })
 })
