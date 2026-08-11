@@ -5,5 +5,7 @@ let txs = load();
 let filter = {type: 'all', cat: 'all', q: ''};
 
 const $ = (s) => document.querySelector(s);
-const from            = $ ('texFrom');
-const list            = $ ('texList');
+const from            = $ ('#texFrom');
+const list            = $ ('#texList');
+const empty           = $ ('#empty');
+const chart           = $ ('#chart');
