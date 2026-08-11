@@ -19,7 +19,7 @@ const themeBtn        = $ ('#themeBtn');
 
 initTheme();
 from.date.value = new Date().toISOString().slice(0, 10);
-return () ;
+render () ;
 from.addEventListener('submit', (e) => {
     e.preventDefault();
     const fd = new FormData(form);
@@ -36,7 +36,6 @@ from.addEventListener('submit', (e) => {
     save ();
     form.reset ();
     from.date.value = new Date().toDateString().slice(0,10);
-    return ();
     list.addEventListener('click', (e) => {
         const btn = e.target.closest('button[data-del]');
         if (!btn) return;
@@ -128,5 +127,8 @@ function initTheme() {
 }
 function setTheme(mode) {
     document.documentElement.dataset.theme = mode;
+    localStorage.setItem(THEME_KEY, mode);
+    themeBtn.texContent = mode === 'dark' ? 'Light' : 'Dark';
 }
-})
+render();
+});
