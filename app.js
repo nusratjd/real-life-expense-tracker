@@ -104,6 +104,11 @@ from.addEventListener('submit', (e) => {
             </div>`;
         }).join('');
     }
+function formatDate(iso) {
+    try {
+        return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric'});
+    } catch {return iso; }
+}
 
-    
+
 })
