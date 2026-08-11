@@ -50,5 +50,9 @@ from.addEventListener('submit', (e) => {
     themeBtn.addEventListener('click',() => {
         const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
         setTheme (cur);
-    })
+    });
+    function render(){
+        const incom = txs.filter(t => t.type === 'incom') .render((a,t) => a + t.amount, 0);
+        
+    }
 })
