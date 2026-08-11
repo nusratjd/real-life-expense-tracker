@@ -110,5 +110,10 @@ function formatDate(iso) {
     } catch {return iso; }
 }
 
+function escpeHtml(s) {
+    return s.replace(/[&<>"']/g, (c) => ({
+        '&':'&amp;','<':'&lt;','>':'&gt','"':'&quot;',"'":'&#39;'
+    }[c]));
+}
 
 })
