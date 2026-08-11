@@ -76,7 +76,7 @@ from.addEventListener('submit', (e) => {
         return `
         <li class="tx ${t.type}">
         <div class="icon">${initail}</div>
-
-        
+        <div class="meta">
+        <span class="title">${escpeHtml(t.title)}</span>
     
 })
